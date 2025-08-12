@@ -7,11 +7,11 @@ import pickle
 import datetime as dt
 import calendar
 import os
+import gdown
 
 app = Flask(__name__)
 
-import os
-import gdown
+
 
 MODEL_PATH = "rf_model.pkl"
 MODEL_FILE_ID = "1jv2SQWOKyVbGNei3oQRXWKHPbL2Ermz8"
