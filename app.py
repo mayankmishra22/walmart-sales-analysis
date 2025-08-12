@@ -10,7 +10,19 @@ import os
 
 app = Flask(__name__)
 
-loaded_model = pickle.load(open('rf_model.pkl','rb'))
+import os
+import gdown
+
+MODEL_PATH = "rf_model.pkl"
+MODEL_FILE_ID = "1jv2SQWOKyVbGNei3oQRXWKHPbL2Ermz8"
+MODEL_URL = f"https://drive.google.com/uc?id={MODEL_FILE_ID}"
+
+if not os.path.exists(MODEL_PATH):
+    print("Downloading model from Google Drive...")
+    gdown.download(MODEL_URL, MODEL_PATH, quiet=False)
+
+with open(MODEL_PATH, 'rb') as f:
+    loaded_model = pickle.load(f)
 fet = pd.read_csv('merged_data.csv')
 
 
