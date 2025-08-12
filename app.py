@@ -15,7 +15,7 @@ import os
 import urllib.request
 
 MODEL_PATH = "rf_model.joblib"
-MODEL_URL = "https://github.com/USERNAME/REPO/releases/download/v1.0-model/rf_model_compressed.joblib"
+MODEL_URL = "https://github.com/mayankmishra22/walmart-sales-analysis/releases/download/v1.0-model/rf_model_compressed.joblib"
 
 if not os.path.exists(MODEL_PATH):
     print("Downloading compressed model from GitHub Releases...")
