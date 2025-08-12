@@ -11,18 +11,18 @@ import gdown
 
 app = Flask(__name__)
 
+import urllib.request
 
-
-MODEL_PATH = "rf_model.pkl"
-MODEL_FILE_ID = "1jv2SQWOKyVbGNei3oQRXWKHPbL2Ermz8"
-MODEL_URL = f"https://drive.google.com/uc?id={MODEL_FILE_ID}"
+MODEL_PATH = "rf_model_compressed.pkl"
+MODEL_URL = "https://github.com/mayankmishra22/walmart-sales-analysis/releases/download/v1.0-model/rf_model_compressed.pkl"
 
 if not os.path.exists(MODEL_PATH):
-    print("Downloading model from Google Drive...")
-    gdown.download(MODEL_URL, MODEL_PATH, quiet=False)
+    print("Downloading model from GitHub Releases...")
+    urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
 
 with open(MODEL_PATH, 'rb') as f:
     loaded_model = pickle.load(f)
+
 fet = pd.read_csv('merged_data.csv')
 
 
