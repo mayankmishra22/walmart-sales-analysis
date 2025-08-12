@@ -10,17 +10,20 @@ import urllib.request
 app = Flask(__name__)
 
 # Model paths and URL
-MODEL_PATH = "rf_model.pkl"
-MODEL_URL = "https://github.com/mayankmishra22/walmart-sales-analysis/releases/download/v1.0-model/rf_model.pkl"
+import joblib
+import os
+import urllib.request
+
+MODEL_PATH = "rf_model.joblib"
+MODEL_URL = "https://github.com/USERNAME/REPO/releases/download/v1.0-model/rf_model_compressed.joblib"
 
 if not os.path.exists(MODEL_PATH):
-    print("Downloading model from GitHub Releases...")
+    print("Downloading compressed model from GitHub Releases...")
     urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
     print("Model downloaded successfully.")
 
-print("Loading model into memory...")
-with open(MODEL_PATH, 'rb') as f:
-    loaded_model = pickle.load(f)
+print("Loading compressed model into memory...")
+loaded_model = joblib.load(MODEL_PATH)
 print("Model loaded successfully.")
 
 # Load CSV data
