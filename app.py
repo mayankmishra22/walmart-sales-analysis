@@ -11,15 +11,13 @@ app = Flask(__name__)
 
 # Model paths and URL
 MODEL_PATH = "rf_model.pkl"
-MODEL_URL = "https://github.com/mayankmishra22/walmart-sales-analysis/releases/download/v1.0-model/rf_model_compressed.pkl"
+MODEL_URL = "https://github.com/mayankmishra22/walmart-sales-analysis/releases/download/v1.0-model/rf_model.pkl"
 
-# Download model if not already present
 if not os.path.exists(MODEL_PATH):
     print("Downloading model from GitHub Releases...")
     urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
     print("Model downloaded successfully.")
 
-# Load model
 print("Loading model into memory...")
 with open(MODEL_PATH, 'rb') as f:
     loaded_model = pickle.load(f)
