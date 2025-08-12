@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Full page styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0a2342, #19376d, #4062bb);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Main container */
+.container {
+  background: rgba(10, 20, 40, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Header styling */
+.header img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+}
+
+/* Form styling */
+.prediction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #4062bb;
+  border-radius: 8px;
+  background-color: #0a2342;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ffcc00;
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+}
+
+/* Radio buttons */
+.radio-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.radio-buttons input[type="radio"] {
+  display: none;
+}
+
+.radio-buttons label {
+  background-color: #0a2342;
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 1px solid #4062bb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.radio-buttons input[type="radio"]:checked + label {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: #ffcc00;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e6b800;
+  transform: translateY(-2px);
+}
+
+/* Results box */
+.results {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #0a2342;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.results h3 {
+  color: #ffcc00;
+}
+
+.results p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.results span {
+  color: #ffcc00;
+}
