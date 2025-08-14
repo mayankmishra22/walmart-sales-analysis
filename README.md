@@ -1,4 +1,4 @@
-# Walmart Sales Forecasting – Flask Deployment
+# Walmart Sales Analysis –
 
 ### Project Overview
 This project predicts the **weekly sales** of Walmart stores using historical data and external factors.  
@@ -30,7 +30,6 @@ Negative weekly sales entries are removed.
 ---
 
 ## Methodology
-The workflow follows a standard machine learning pipeline:
 
 1. **Data Loading & Exploration**  
    - Understanding dataset structure, handling missing values, and visualizing distributions.
@@ -108,6 +107,11 @@ Random Forest emerged as the most balanced performer and was selected for deploy
 ├── merged_data.csv               # Final processed dataset
 ├── templates/
 │   └── index.html                # Web interface
+├── static/
+│   └── images
+      └── walmarticon.png
+│   └── css
+      └── styles.css 
 └── README.md
 ```
 
@@ -143,9 +147,10 @@ python app.py
 Access at:
 ```
 http://127.0.0.1:5000/
-```
+
+### Demo
+<img width="1920" height="1080" alt="output" src="https://github.com/user-attachments/assets/4104db22-eed9-4ce3-924e-b0135e34eeeb" />
+
 
 ---
 
-## GitHub "About" Section
-> **Walmart Sales Forecasting** – Predict weekly sales for Walmart stores using Random Forest, XGBoost, and ARIMA. Trained on historical sales data with feature engineering and deployed via Flask.
