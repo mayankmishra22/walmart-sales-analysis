@@ -149,7 +149,9 @@ Access at:
 http://127.0.0.1:5000/
 
 ### Demo
-<img width="1920" height="1080" alt="output" src="https://github.com/user-attachments/assets/4104db22-eed9-4ce3-924e-b0135e34eeeb" />
+<img width="1920" height="1080" alt="output" src="https://github.com/user-attachments/assets/6cb3282a-26fc-443d-a28a-0be757c353cb" />
+<img width="1920" height="1080" alt="input" src="https://github.com/user-attachments/assets/18eb4810-a881-47ae-893a-2d3969b898ae" />
+
 
 
 ---
